@@ -9,12 +9,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Fifteen Puzzle Game </title>
     <link rel="icon" href="img/favicon.png" />
+    <p><a href="teamintro3.html"> Link to Team Introduction</a></p>
     <link
       href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap"
       rel="stylesheet"
     />
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+    <audio controls>
+      <source src="kahoot.mp3" type="audio/ogg">
+      <source src="kahoot.mp3" type="audio/mpeg">
 
+    </audio> 
+    
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body onload="startReadyOverLay()">
@@ -39,8 +45,22 @@
 
       <div id= "overlay-2" onclick="endCongratsOverLay()">
         <div id= "text-2">Congrats 🎈🎉, You did it! click to replay</div>
-      </div>
+      </div> 
       <script src="js/app.js"></script>
+      <p>seconds: <span id="time">0</span></p>
+
+  <script>
+    let time= 0;
+    const times = document.getElementById("time");
+
+    setInterval(() => {
+      time++;
+      times.textContent = time; 
+    }, 1000);
+  </script>
     </div>
   </body>
 </html>
+
+
+
